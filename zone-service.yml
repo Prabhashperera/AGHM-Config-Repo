@@ -18,5 +18,6 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
 iot:
   server:
+    url: http://localhost:8083/api
     username: prabash
     password: 12345
