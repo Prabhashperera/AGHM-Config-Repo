@@ -6,3 +6,7 @@ iot:
     url: http://localhost:8090/api
     username: prabash
     password: 12345
+
+automation:
+  service:
+    url: http://localhost:8085/api/automation
