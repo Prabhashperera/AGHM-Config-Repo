@@ -1,20 +1,20 @@
 server:
-  port: 8083
-spring:
-  application:
-    name: automation-service # This name MUST match what Telemetry is looking for!
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  port: 8083 # Using 8085 as we discussed to avoid conflicts
 
 spring:
+  application:
+    name: automation-service
   datasource:
     url: jdbc:mysql://localhost:3306/agms_automation?createDatabaseIfNotExist=true
     username: root
-    password: 1234
+    password: "1234" # Ensure this matches your MySQL password
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
